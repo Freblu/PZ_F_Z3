@@ -29,5 +29,4 @@ void MergeSort::Merge()
 
 void MergeSort::Mk_Pivot()
 {
-	pivot = poc + (kon - poc) / 2;
 };

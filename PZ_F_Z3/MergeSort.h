@@ -17,5 +17,6 @@ public:
 	void Merge(int p1[], int lr, int p2[], int pr);
 	void Sort(int tab[], int l, int p);
 	void Wypisz();
+	void StartSort();
 };
 

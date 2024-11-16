@@ -20,8 +20,23 @@ MergeSort::~MergeSort()
 void MergeSort::Merge(int p1[], int lr, int p2[], int pr)
 {
 	int* tab = new int[roz];
-
-
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	while (i < lr && j < pr)
+	{
+		if (p1[i] <= p2[j])
+		{
+			tab[k++] = p1[i++];
+		}
+		else 
+		{
+			tab[k++] = p2[j++];
+		}
+	}
+	for (int l = 0; l < roz; l++) {
+		dane[i] = tab[i];
+	}
 }
 
 void MergeSort::Sort(int tab[], int l, int p)
@@ -56,4 +71,9 @@ void MergeSort::Wypisz()
 	{
 		cout << dane[i] << " ";
 	}
+}
+
+void MergeSort::StartSort()
+{
+	Sort(dane, lew, pra);
 }

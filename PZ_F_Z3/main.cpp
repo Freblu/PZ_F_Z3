@@ -8,4 +8,7 @@ int main()
 	MergeSort A(tab, roz, 0, roz - 1);
 	A.Wypisz();
 	cout << "\n";
+	A.StartSort();
+	cout << "Posortowana tablica : \n";
+	A.Wypisz();
 }

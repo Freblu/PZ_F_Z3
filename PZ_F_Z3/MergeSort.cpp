@@ -1,10 +1,10 @@
 #pragma once
 #include "MergeSort.h"
 
-MergeSort::MergeSort(int r, int tab[], int p, int k)
+MergeSort::MergeSort(int tab[], int r, int p, int k)
 {
-	poc = p;
-	kon = k;
+	lew = p;
+	pra = k;
 	roz = r;
 	dane = new int [r];
 	for (int i = 0; i < r; i++) {
@@ -17,17 +17,22 @@ MergeSort::~MergeSort()
 	delete dane; 
 };
 
-void MergeSort::Split()
+
+void MergeSort::Sort()
 {
-
-};
-
-void MergeSort::Merge()
-{
-
+	int p1 = pivot - lew + 1;
+	int p2 = pra - pivot;
 };
 
 void MergeSort::Mk_Pivot()
 {
-	pivot = poc + (kon - poc) / 2;
+	pivot = pra + (pra - lew) / 2;
 };
+
+void MergeSort::Wypisz()
+{
+	for (int i = 0; i < roz; i++)
+	{
+		cout << dane[i] << " ";
+	}
+}

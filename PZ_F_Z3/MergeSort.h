@@ -6,7 +6,6 @@ using namespace std;
 class MergeSort
 {
 private:
-	int pivot = 0;
 	int roz;
 	int* dane;
 	int lew;
@@ -15,8 +14,8 @@ public:
 
 	MergeSort(int tab[], int r, int p, int k);
 	~MergeSort();
-	void Sort();
-	void Mk_Pivot();
+	void Merge(int p1[], int lr, int p2[], int pr);
+	void Sort(int tab[], int l, int p);
 	void Wypisz();
 };
 

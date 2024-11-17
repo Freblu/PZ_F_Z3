@@ -14,7 +14,7 @@ public:
 
 	MergeSort(int tab[], int r, int p, int k);
 	~MergeSort();
-	void Merge(int p1[], int lr, int p2[], int pr);
+	void Merge(int tab[], int l, int pivot, int p);
 	void Sort(int tab[], int l, int p);
 	void Wypisz();
 	void StartSort();

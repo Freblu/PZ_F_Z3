@@ -7,61 +7,68 @@ MergeSort::MergeSort(int tab[], int r, int p, int k)
 	pra = k;
 	roz = r;
 	dane = new int [r];
-	for (int i = 0; i < r; i++) {
+	for (int i = 0; i < r; i++) 
+    {
 		dane[i] = tab[i];
 	}
 };
 
 MergeSort::~MergeSort() 
 {
-	delete dane; 
+	delete[] dane; 
 };
 
-void MergeSort::Merge(int p1[], int lr, int p2[], int pr)
+void MergeSort::Merge(int tab[], int l, int pivot, int p)
 {
-	int* tab = new int[roz];
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	while (i < lr && j < pr)
-	{
-		if (p1[i] <= p2[j])
-		{
-			tab[k++] = p1[i++];
-		}
-		else 
-		{
-			tab[k++] = p2[j++];
-		}
-	}
-	for (int l = 0; l < roz; l++) {
-		dane[i] = tab[i];
-	}
+    int n1 = pivot - l + 1;
+    int n2 = p - pivot;
+
+    int* left = new int[n1];
+    int* right = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        left[i] = tab[l + i];
+    for (int i = 0; i < n2; i++)
+        right[i] = tab[pivot + 1 + i];
+
+    int i = 0;
+    int j = 0;
+    int k = l;
+
+    while (i < n1 && j < n2) 
+    {
+        if (left[i] <= right[j]) 
+        {
+            tab[k++] = left[i++];
+        }
+        else 
+        {
+            tab[k++] = right[j++];
+        }
+    }
+    while (i < n1) 
+    {
+        tab[k++] = left[i++];
+    }
+    while (j < n2) 
+    {
+        tab[k++] = right[j++];
+    }
+
+    delete[] left;
+    delete[] right;
 }
 
 void MergeSort::Sort(int tab[], int l, int p)
 {
-	if (l >= p)
-	{
+	if (l >= p) 
+    {
 		return;
 	}
 	int pivot = l + (p - l) / 2;
 	Sort(tab, l, pivot);
 	Sort(tab, pivot + 1, p);
-	
-	int* p1 = new int[pivot - l + 1];
-	int* p2 = new int[p - pivot];
-
-	for (int i = 0; i <= pivot - lew; i++)
-	{
-		p1[i] = tab[l + i];
-	}
-
-	for (int i = 0; i <= p - pivot; i++)
-	{
-		p2[i] = tab[pivot + 1 + i];
-	}
-	Merge(p1, pivot - l + 1, p2, p - pivot);
+	Merge(tab, l, pivot, p);
 };
 
 

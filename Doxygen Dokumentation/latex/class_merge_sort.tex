@@ -1,0 +1,105 @@
+\doxysection{Merge\+Sort Class Reference}
+\hypertarget{class_merge_sort}{}\label{class_merge_sort}\index{MergeSort@{MergeSort}}
+
+
+Klasa sortowania tablicy. Klasa sluzy do przechowywania i sortowania tablice.  
+
+
+
+
+{\ttfamily \#include $<$Merge\+Sort.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_merge_sort_ae92a141f367657d770606f2b2b078818}{Merge\+Sort}} (int tab\mbox{[}$\,$\mbox{]}, int r, int p, int k)
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca index konca tablicy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_merge_sort_a7140fd17b17558d9810c8e791c353909}{\texorpdfstring{$\sim$}{\string~}\+Merge\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Deklaracja kontruktora klasy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_ac533ccddd363bdef19a4ff074bd6b821}{Merge}} (int tab\mbox{[}$\,$\mbox{]}, int l, int pivot, int p)
+\begin{DoxyCompactList}\small\item\em Deklaracja destruktora klasy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_a936cb87a5ab13f718195aaf6e647e988}{Sort}} (int tab\mbox{[}$\,$\mbox{]}, int l, int p)
+\begin{DoxyCompactList}\small\item\em Deklaracja metody laczacej i sortujacej tablice przekazane do niej. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_abe26c23d5a665c88541d717c435cba73}{Wypisz}} ()
+\begin{DoxyCompactList}\small\item\em Deklaracja metody dzielacej i przekazujacej tablice do odpowiednich metod. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_a4bc15e30a327649fc35ae2cc211b8ac4}{Start\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Deklaracja metody wypisujacej tablice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa sortowania tablicy. Klasa sluzy do przechowywania i sortowania tablice. 
+
+Klasa sortuje tablice z uzyciem rekursywnej meody Sort oraz metody Merge, pozostale metody sluza do testowania i obslugi klasy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_merge_sort_ae92a141f367657d770606f2b2b078818}\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{MergeSort()}{MergeSort()}}
+{\footnotesize\ttfamily \label{class_merge_sort_ae92a141f367657d770606f2b2b078818} 
+Merge\+Sort\+::\+Merge\+Sort (\begin{DoxyParamCaption}\item[{int}]{tab}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{r}{, }\item[{int}]{p}{, }\item[{int}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Zmienna przechowujaca index konca tablicy. 
+
+Definicja konstruktora klasy. Definicja konstruktora klasy slzacego do zapisania przekazanych argumentow do zmiennych klasy.
+
+Deklaracja \Hypertarget{class_merge_sort_a7140fd17b17558d9810c8e791c353909}\index{MergeSort@{MergeSort}!````~MergeSort@{\texorpdfstring{$\sim$}{\string~}MergeSort}}
+\index{````~MergeSort@{\texorpdfstring{$\sim$}{\string~}MergeSort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MergeSort()}{\string~MergeSort()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a7140fd17b17558d9810c8e791c353909} 
+Merge\+Sort\+::\texorpdfstring{$\sim$}{\string~}\+Merge\+Sort (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Deklaracja kontruktora klasy. 
+
+Definicja destruktora klasy. Definicja destruktora klasy sluzacego do zwolnienia wskaznika do tablicy gdy nie jest juz potrzebny. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_merge_sort_ac533ccddd363bdef19a4ff074bd6b821}\index{MergeSort@{MergeSort}!Merge@{Merge}}
+\index{Merge@{Merge}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily \label{class_merge_sort_ac533ccddd363bdef19a4ff074bd6b821} 
+void Merge\+Sort\+::\+Merge (\begin{DoxyParamCaption}\item[{int}]{tab}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{l}{, }\item[{int}]{pivot}{, }\item[{int}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Deklaracja destruktora klasy. 
+
+Metoda klasy Merge sluzacej do polaczenia tablic. Metoda klasy Merge sluzacej do polaczenia dwoch tablic, ktore zostaly przekazane to tej metody przez metode Sort, w odpowiedniej kolejnosci. \Hypertarget{class_merge_sort_a936cb87a5ab13f718195aaf6e647e988}\index{MergeSort@{MergeSort}!Sort@{Sort}}
+\index{Sort@{Sort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a936cb87a5ab13f718195aaf6e647e988} 
+void Merge\+Sort\+::\+Sort (\begin{DoxyParamCaption}\item[{int}]{tab}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{l}{, }\item[{int}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Deklaracja metody laczacej i sortujacej tablice przekazane do niej. 
+
+Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge Metoda ktora rekursywnie dzieli tablice, wedlug punktu zapisanego w zmiennej pivot, i przekazuja ja do metody Merge gdzie tablice sa odpowiednio laczone. \Hypertarget{class_merge_sort_a4bc15e30a327649fc35ae2cc211b8ac4}\index{MergeSort@{MergeSort}!StartSort@{StartSort}}
+\index{StartSort@{StartSort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{StartSort()}{StartSort()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a4bc15e30a327649fc35ae2cc211b8ac4} 
+void Merge\+Sort\+::\+Start\+Sort (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Deklaracja metody wypisujacej tablice. 
+
+Metoda inicjujaca sortowanie zapisanej tablicy. \Hypertarget{class_merge_sort_abe26c23d5a665c88541d717c435cba73}\index{MergeSort@{MergeSort}!Wypisz@{Wypisz}}
+\index{Wypisz@{Wypisz}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Wypisz()}{Wypisz()}}
+{\footnotesize\ttfamily \label{class_merge_sort_abe26c23d5a665c88541d717c435cba73} 
+void Merge\+Sort\+::\+Wypisz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Deklaracja metody dzielacej i przekazujacej tablice do odpowiednich metod. 
+
+Metoda wypisujaca zapisana w klasie tablice. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+PZ\+\_\+\+F\+\_\+\+Z3/Merge\+Sort.\+h\item 
+PZ\+\_\+\+F\+\_\+\+Z3/Merge\+Sort.\+cpp\end{DoxyCompactItemize}

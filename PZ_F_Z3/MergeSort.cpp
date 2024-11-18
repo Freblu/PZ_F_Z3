@@ -1,7 +1,9 @@
 #pragma once
 #include "MergeSort.h"
 
-MergeSort::MergeSort(int tab[], int r, int p, int k)
+MergeSort::MergeSort(int tab[], int r, int p, int k)/*!Deklaracja \brief Definicja konstruktora klasy.
+* Definicja konstruktora klasy slzacego do zapisania przekazanych argumentow do zmiennych klasy
+*/
 {
 	lew = p;
 	pra = k;
@@ -13,12 +15,16 @@ MergeSort::MergeSort(int tab[], int r, int p, int k)
 	}
 };
 
-MergeSort::~MergeSort() 
+MergeSort::~MergeSort() /*! \brief Definicja destruktora klasy.
+* Definicja destruktora klasy sluzacego do zwolnienia wskaznika do tablicy gdy nie jest juz potrzebny
+*/
 {
 	delete[] dane; 
 };
 
-void MergeSort::Merge(int tab[], int l, int pivot, int p)
+void MergeSort::Merge(int tab[], int l, int pivot, int p) /*! \brief Metoda klasy Merge sluzacej do polaczenia tablic.
+* Metoda klasy Merge sluzacej do polaczenia dwoch tablic, ktore zostaly przekazane to tej metody przez metode Sort, w odpowiedniej kolejnosci.
+*/
 {
     int n1 = pivot - l + 1;
     int n2 = p - pivot;
@@ -59,7 +65,9 @@ void MergeSort::Merge(int tab[], int l, int pivot, int p)
     delete[] right;
 }
 
-void MergeSort::Sort(int tab[], int l, int p)
+void MergeSort::Sort(int tab[], int l, int p)/*! \brief Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge
+* Metoda ktora rekursywnie dzieli tablice, wedlug punktu zapisanego w zmiennej pivot, i przekazuja ja do metody Merge gdzie tablice sa odpowiednio laczone.
+*/
 {
 	if (l >= p) 
     {
@@ -72,7 +80,7 @@ void MergeSort::Sort(int tab[], int l, int p)
 };
 
 
-void MergeSort::Wypisz()
+void MergeSort::Wypisz() /*! Metoda wypisujaca zapisana w klasie tablice. */
 {
 	for (int i = 0; i < roz; i++)
 	{
@@ -80,7 +88,7 @@ void MergeSort::Wypisz()
 	}
 }
 
-void MergeSort::StartSort()
+void MergeSort::StartSort() /*! Metoda inicjujaca sortowanie zapisanej tablicy. */
 {
 	Sort(dane, lew, pra);
 }

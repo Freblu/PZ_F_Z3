@@ -1,9 +1,10 @@
 #pragma once
 #include "MergeSort.h"
 
-MergeSort::MergeSort(int tab[], int r, int p, int k)/*!Deklaracja \brief Definicja konstruktora klasy.
+/*!Deklaracja \brief Definicja konstruktora klasy.
 * Definicja konstruktora klasy slzacego do zapisania przekazanych argumentow do zmiennych klasy
 */
+MergeSort::MergeSort(int tab[], int r, int p, int k)
 {
 	lew = p;
 	pra = k;
@@ -15,16 +16,18 @@ MergeSort::MergeSort(int tab[], int r, int p, int k)/*!Deklaracja \brief Definic
 	}
 };
 
-MergeSort::~MergeSort() /*! \brief Definicja destruktora klasy.
+/*! \brief Definicja destruktora klasy.
 * Definicja destruktora klasy sluzacego do zwolnienia wskaznika do tablicy gdy nie jest juz potrzebny
 */
+MergeSort::~MergeSort()
 {
 	delete[] dane; 
 };
 
-void MergeSort::Merge(int tab[], int l, int pivot, int p) /*! \brief Metoda klasy Merge sluzacej do polaczenia tablic.
+/*! \brief Metoda klasy Merge sluzacej do polaczenia tablic.
 * Metoda klasy Merge sluzacej do polaczenia dwoch tablic, ktore zostaly przekazane to tej metody przez metode Sort, w odpowiedniej kolejnosci.
 */
+void MergeSort::Merge(int tab[], int l, int pivot, int p) 
 {
     int n1 = pivot - l + 1;
     int n2 = p - pivot;
@@ -65,9 +68,10 @@ void MergeSort::Merge(int tab[], int l, int pivot, int p) /*! \brief Metoda klas
     delete[] right;
 }
 
-void MergeSort::Sort(int tab[], int l, int p)/*! \brief Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge
+/*! \brief Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge
 * Metoda ktora rekursywnie dzieli tablice, wedlug punktu zapisanego w zmiennej pivot, i przekazuja ja do metody Merge gdzie tablice sa odpowiednio laczone.
 */
+void MergeSort::Sort(int tab[], int l, int p)
 {
 	if (l >= p) 
     {
@@ -79,16 +83,16 @@ void MergeSort::Sort(int tab[], int l, int p)/*! \brief Metoda ktora rekursywnie
 	Merge(tab, l, pivot, p);
 };
 
-
-void MergeSort::Wypisz() /*! Metoda wypisujaca zapisana w klasie tablice. */
+/*! Metoda wypisujaca zapisana w klasie tablice. */
+void MergeSort::Wypisz()
 {
 	for (int i = 0; i < roz; i++)
 	{
 		cout << dane[i] << " ";
 	}
 }
-
-void MergeSort::StartSort() /*! Metoda inicjujaca sortowanie zapisanej tablicy. */
+/*! Metoda inicjujaca sortowanie zapisanej tablicy. */
+void MergeSort::StartSort()
 {
 	Sort(dane, lew, pra);
 }

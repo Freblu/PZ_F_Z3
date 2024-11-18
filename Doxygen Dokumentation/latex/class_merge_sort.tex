@@ -13,17 +13,18 @@ Klasa sortowania tablicy. Klasa sluzy do przechowywania i sortowania tablice.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_merge_sort_ae92a141f367657d770606f2b2b078818}{Merge\+Sort}} (int tab\mbox{[}$\,$\mbox{]}, int r, int p, int k)
-\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca index konca tablicy. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_merge_sort_a7140fd17b17558d9810c8e791c353909}{\texorpdfstring{$\sim$}{\string~}\+Merge\+Sort}} ()
 \begin{DoxyCompactList}\small\item\em Deklaracja kontruktora klasy. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_merge_sort_ac533ccddd363bdef19a4ff074bd6b821}{Merge}} (int tab\mbox{[}$\,$\mbox{]}, int l, int pivot, int p)
+\mbox{\hyperlink{class_merge_sort_a7140fd17b17558d9810c8e791c353909}{\texorpdfstring{$\sim$}{\string~}\+Merge\+Sort}} ()
 \begin{DoxyCompactList}\small\item\em Deklaracja destruktora klasy. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_merge_sort_a936cb87a5ab13f718195aaf6e647e988}{Sort}} (int tab\mbox{[}$\,$\mbox{]}, int l, int p)
+void \mbox{\hyperlink{class_merge_sort_ac533ccddd363bdef19a4ff074bd6b821}{Merge}} (int tab\mbox{[}$\,$\mbox{]}, int l, int pivot, int p)
 \begin{DoxyCompactList}\small\item\em Deklaracja metody laczacej i sortujacej tablice przekazane do niej. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_merge_sort_abe26c23d5a665c88541d717c435cba73}{Wypisz}} ()
+void \mbox{\hyperlink{class_merge_sort_a936cb87a5ab13f718195aaf6e647e988}{Sort}} (int tab\mbox{[}$\,$\mbox{]}, int l, int p)
 \begin{DoxyCompactList}\small\item\em Deklaracja metody dzielacej i przekazujacej tablice do odpowiednich metod. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_abe26c23d5a665c88541d717c435cba73}{Wypisz}} ()
+\begin{DoxyCompactList}\small\item\em Deklaracja metody wypisujacej tablice. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_merge_sort_a4bc15e30a327649fc35ae2cc211b8ac4}{Start\+Sort}} ()
-\begin{DoxyCompactList}\small\item\em Deklaracja metody wypisujacej tablice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Deklaracja metody rozpoczynajacej sortowanie zapisanej tablicy ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -40,7 +41,7 @@ Merge\+Sort\+::\+Merge\+Sort (\begin{DoxyParamCaption}\item[{int}]{tab}{\mbox{[}
 
 
 
-Zmienna przechowujaca index konca tablicy. 
+Deklaracja kontruktora klasy. 
 
 Definicja konstruktora klasy. Definicja konstruktora klasy slzacego do zapisania przekazanych argumentow do zmiennych klasy.
 
@@ -52,7 +53,7 @@ Merge\+Sort\+::\texorpdfstring{$\sim$}{\string~}\+Merge\+Sort (\begin{DoxyParamC
 
 
 
-Deklaracja kontruktora klasy. 
+Deklaracja destruktora klasy. 
 
 Definicja destruktora klasy. Definicja destruktora klasy sluzacego do zwolnienia wskaznika do tablicy gdy nie jest juz potrzebny. 
 
@@ -65,7 +66,7 @@ void Merge\+Sort\+::\+Merge (\begin{DoxyParamCaption}\item[{int}]{tab}{\mbox{[}$
 
 
 
-Deklaracja destruktora klasy. 
+Deklaracja metody laczacej i sortujacej tablice przekazane do niej. 
 
 Metoda klasy Merge sluzacej do polaczenia tablic. Metoda klasy Merge sluzacej do polaczenia dwoch tablic, ktore zostaly przekazane to tej metody przez metode Sort, w odpowiedniej kolejnosci. \Hypertarget{class_merge_sort_a936cb87a5ab13f718195aaf6e647e988}\index{MergeSort@{MergeSort}!Sort@{Sort}}
 \index{Sort@{Sort}!MergeSort@{MergeSort}}
@@ -75,7 +76,7 @@ void Merge\+Sort\+::\+Sort (\begin{DoxyParamCaption}\item[{int}]{tab}{\mbox{[}$\
 
 
 
-Deklaracja metody laczacej i sortujacej tablice przekazane do niej. 
+Deklaracja metody dzielacej i przekazujacej tablice do odpowiednich metod. 
 
 Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge Metoda ktora rekursywnie dzieli tablice, wedlug punktu zapisanego w zmiennej pivot, i przekazuja ja do metody Merge gdzie tablice sa odpowiednio laczone. \Hypertarget{class_merge_sort_a4bc15e30a327649fc35ae2cc211b8ac4}\index{MergeSort@{MergeSort}!StartSort@{StartSort}}
 \index{StartSort@{StartSort}!MergeSort@{MergeSort}}
@@ -85,7 +86,8 @@ void Merge\+Sort\+::\+Start\+Sort (\begin{DoxyParamCaption}{}{}\end{DoxyParamCap
 
 
 
-Deklaracja metody wypisujacej tablice. 
+Deklaracja metody rozpoczynajacej sortowanie zapisanej tablicy ~\newline
+ 
 
 Metoda inicjujaca sortowanie zapisanej tablicy. \Hypertarget{class_merge_sort_abe26c23d5a665c88541d717c435cba73}\index{MergeSort@{MergeSort}!Wypisz@{Wypisz}}
 \index{Wypisz@{Wypisz}!MergeSort@{MergeSort}}
@@ -95,7 +97,7 @@ void Merge\+Sort\+::\+Wypisz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 
 
-Deklaracja metody dzielacej i przekazujacej tablice do odpowiednich metod. 
+Deklaracja metody wypisujacej tablice. 
 
 Metoda wypisujaca zapisana w klasie tablice. 
 

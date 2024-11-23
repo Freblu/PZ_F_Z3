@@ -271,3 +271,37 @@ TEST_F(MergeSortTest, BigTest) {
     }
     MergeSortTest::TearDown();
 }
+
+
+TEST_F(MergeSortTest, BigPozAndNegDoubleTest) {
+    int tab[102];
+    int x = 0;
+    for (int i = 0; i < 100; ++i) {
+        x = -abs(rand());
+        tab[i] = x;
+        i++;
+        tab[i] = x;
+        i++;
+        x = abs(rand());
+        tab[i] = x;
+        i++;
+        tab[i] = x;
+    }
+    roz = sizeof(tab) / sizeof(tab[0]);
+    MergeSortTest::SetUp(tab, roz);
+
+    int p = 0;
+    int n = 0;
+    bool t;
+    for (int i = 0; i < roz; ++i) {
+        testTab[i] = p;
+        i++;
+        testTab[i] = n;
+        if (p <= n)
+            t = true;
+        else
+            t = false;
+        EXPECT_TRUE(t);
+    }
+    MergeSortTest::TearDown();
+}

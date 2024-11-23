@@ -34,5 +34,7 @@ public:
 	void Wypisz(); 
 	//! Deklaracja metody rozpoczynajacej sortowanie zapisanej tablicy      
 	void StartSort(); 
+	//! Deklaracja metody zwracaj¹cej tablice
+	int DajDane(int x);
 };
 

@@ -14,7 +14,7 @@ MergeSort Sortowanie(int tb[])
 
 int main()
 {
-	int tab[] = { 42, 53, 12, 24, 75, 3, 64, 8 };
+	int tab[] = {5,4,3,2,1,};
 	int roz = sizeof(tab) / 4;
 	
 	cout << "Nieposortowana tablica : \n";

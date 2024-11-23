@@ -97,3 +97,9 @@ void MergeSort::StartSort()
 {
 	Sort(dane, lew, pra);
 }
+
+int MergeSort::DajDane(int x)
+{
+
+    return dane[x];
+}

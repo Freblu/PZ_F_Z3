@@ -94,3 +94,31 @@ TEST_F(MergeSortTest, NegativeTest) {
     }
     MergeSortTest::TearDown();
 }
+
+TEST_F(MergeSortTest, PosAndNegTest) {
+    int tab[6];
+    for (int i = 0; i < 3; ++i) {
+        tab[i] = -abs(rand());
+    }
+    for (int i = 3; i < 5; ++i) {
+        tab[i] = abs(rand());
+    }
+    roz = sizeof(tab) / sizeof(tab[0]);
+    MergeSortTest::SetUp(tab, roz);
+
+    int p = 0;
+    int n = 0;
+    bool t;
+    for (int i = 0; i < roz; ++i) {
+        testTab[i] = p;
+        i++;
+        testTab[i] = n;
+        if (p <= n)
+            t = true;
+        else
+            t = false;
+        EXPECT_TRUE(t);
+    }
+    MergeSortTest::TearDown();
+}
+

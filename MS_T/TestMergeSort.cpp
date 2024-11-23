@@ -144,3 +144,29 @@ TEST_F(MergeSortTest, SingularTest) {
     MergeSortTest::TearDown();
 }
 
+TEST_F(MergeSortTest, DoubleTest) {
+    int tab[12];
+    for (int i = 0; i < 10; ++i) {
+        int x = rand();
+        tab[i] = x;
+        i++;
+        tab[i] = x;
+    }
+    roz = sizeof(tab) / sizeof(tab[0]);
+    MergeSortTest::SetUp(tab, roz);
+
+    int p = 0;
+    int n = 0;
+    bool t;
+    for (int i = 0; i < roz; ++i) {
+        testTab[i] = p;
+        i++;
+        testTab[i] = n;
+        if (p <= n)
+            t = true;
+        else
+            t = false;
+        EXPECT_TRUE(t);
+    }
+    MergeSortTest::TearDown();
+}

@@ -133,3 +133,14 @@ TEST_F(MergeSortTest, PustyTest) {
     MergeSortTest::TearDown();
 }
 
+TEST_F(MergeSortTest, SingularTest) {
+    int tab[] = { 5 };
+    roz = sizeof(tab) / sizeof(tab[0]);
+    MergeSortTest::SetUp(tab, roz);
+
+    for (int i = 0; i < roz; ++i) {
+        EXPECT_EQ(testTab[i], { 5 });
+    }
+    MergeSortTest::TearDown();
+}
+

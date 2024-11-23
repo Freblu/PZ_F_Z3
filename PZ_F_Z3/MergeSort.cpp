@@ -68,7 +68,11 @@ void MergeSort::Merge(int tab[], int l, int pivot, int p)
     delete[] right;
 }
 
+<<<<<<< Updated upstream
 /*! \brief Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge
+=======
+void MergeSort::Sort(int tab[], int l, int p) /*! \brief Metoda ktora rekursywnie dzieli tablice i przekazuja ja do metody Merge
+>>>>>>> Stashed changes
 * Metoda ktora rekursywnie dzieli tablice, wedlug punktu zapisanego w zmiennej pivot, i przekazuja ja do metody Merge gdzie tablice sa odpowiednio laczone.
 */
 void MergeSort::Sort(int tab[], int l, int p)

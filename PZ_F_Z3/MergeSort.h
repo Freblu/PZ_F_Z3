@@ -22,6 +22,7 @@ private:
 	//! Zmienna przechowujaca index konca tablicy
 	int pra;
 public:
+<<<<<<< Updated upstream
 	//! Deklaracja kontruktora klasy
 	MergeSort(int tab[], int r, int p, int k); 
 	//! Deklaracja destruktora klasy
@@ -34,5 +35,14 @@ public:
 	void Wypisz(); 
 	//! Deklaracja metody rozpoczynajacej sortowanie zapisanej tablicy      
 	void StartSort(); 
+=======
+
+	MergeSort(int tab[], int r, int p, int k); //! Deklaracja kontruktora klasy
+	~MergeSort(); //! Deklaracja destruktora klasy
+	void Merge(int tab[], int l, int pivot, int p); //! Deklaracja metody laczacej i sortujacej tablice przekazane do niej. 
+	void Sort(int tab[], int l, int p); //! Deklaracja metody dzielacej i przekazujacej tablice do odpowiednich metod
+	void Wypisz(); //! Deklaracja metody wypisujacej tablice
+	void StartSort(); //! Deklaracja  rozpoczynajace sortowanie zapisanej tablicy      
+>>>>>>> Stashed changes
 };
 

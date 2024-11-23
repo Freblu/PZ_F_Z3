@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "MergeSort.h"
 
 /*!Deklaracja \brief Definicja konstruktora klasy.

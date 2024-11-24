@@ -14,10 +14,24 @@ MergeSort Sortowanie(int tb[])
 
 int main()
 {
-	int tab[102];
-	for (int i = 0; i < 100; ++i) {
-		tab[i] = rand();
-	}
+	srand(time(NULL));
+
+    int tab[102];
+    int x = 0;
+    for (int i = 0; i < 101; ++i) {
+        x = -abs(rand());
+        tab[i] = x;
+        if (i < 101)
+            i++;
+        tab[i] = x;
+        if (i < 101)
+            i++;
+        x = abs(rand());
+        tab[i] = x;
+        if (i < 101)
+            i++;
+        tab[i] = x;
+    }
 	int roz = sizeof(tab) / sizeof(tab[0]);
 	
 	cout << "Nieposortowana tablica : \n";
@@ -27,7 +41,4 @@ int main()
 	A.StartSort();
 	cout << "Posortowana tablica : \n";
 	A.Wypisz();
-	
-
-	
 }

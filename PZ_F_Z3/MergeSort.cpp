@@ -88,7 +88,7 @@ void MergeSort::Wypisz()
 {
 	for (int i = 0; i < roz; i++)
 	{
-		cout << dane[i] << " ";
+		cout << dane[i] << " | " << i << " \n";
 	}
 }
 /*! Metoda inicjujaca sortowanie zapisanej tablicy. */

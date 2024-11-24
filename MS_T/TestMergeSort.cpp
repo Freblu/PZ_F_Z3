@@ -2,6 +2,7 @@
 #include "MergeSort.h"
 #include <cmath>
 
+
 class MergeSortTest : public ::testing::Test {
 public:
     int* testTab;
@@ -15,6 +16,7 @@ public:
             testTab[i] = A->DajDane(i);
         }
         delete A;
+        srand(time(NULL));
     }
 
     void TearDown() {
@@ -39,85 +41,67 @@ TEST_F(MergeSortTest, RevertTest) {
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-
-    int sortTab[] = {1,2,3,4,5};
-    for (int i = 0; i < roz; ++i) {
-        EXPECT_EQ(testTab[i], sortTab[i]);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, RandTest) {
-    int tab[6];
+    int tab[5];
     for (int i = 0; i < 5; ++i) {
         tab[i] = rand();
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, NegativeTest) {
-    int tab[6];
+    int tab[5];
     for (int i = 0; i < 5; ++i) {
         tab[i] = -abs(rand());
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, PosAndNegTest) {
-    int tab[6];
-    for (int i = 0; i < 3; ++i) {
-        tab[i] = -abs(rand());
-    }
-    for (int i = 3; i < 5; ++i) {
-        tab[i] = abs(rand());
+    int tab[5];
+    for (int i = 0; i < 5; ++i) {
+        if (i <= 2)
+        {
+            int x = -abs(rand());
+            tab[i] = x;
+        }
+        if (i > 2)
+        {
+            int x = abs(rand());
+            tab[i] = x;
+        }
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
@@ -145,129 +129,98 @@ TEST_F(MergeSortTest, SingularTest) {
 }
 
 TEST_F(MergeSortTest, DoubleTest) {
-    int tab[12];
+    int tab[10];
     for (int i = 0; i < 10; ++i) {
         int x = rand();
         tab[i] = x;
+        if (i < 10)
         i++;
         tab[i] = x;
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, DoubleNegTest) {
-    int tab[12];
+    int tab[10];
     for (int i = 0; i < 10; ++i) {
         int x = -abs(rand());
         tab[i] = x;
+        if (i < 10)
         i++;
         tab[i] = x;
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, DoublePozAndNegTest) {
-    int tab[12];
-    for (int i = 0; i < 5; ++i) {
-        int x = -abs(rand());
-        tab[i] = x;
-        i++;
-        tab[i] = x;
-    }
-    for (int i = 5; i < 10; ++i) {
-        int x = abs(rand());
-        tab[i] = x;
-        i++;
-        tab[i] = x;
+    int tab[10];
+    for (int i = 0; i < 10; ++i) {
+        if (i <= 5)
+        {
+            int x = -abs(rand());
+            tab[i] = x;
+            i++;
+            tab[i] = x;
+        }
+        if (i > 5)
+        {
+            int x = abs(rand());
+            tab[i] = x;
+            if (i < 10)
+            i++;
+            tab[i] = x;
+        }
     }
 
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, TwoTest) {
-    int tab[3] = { 5, 10 };
+    int tab[2] = { 5, 10 };
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    bool t;
-
-    if (testTab[1] <= testTab[2])
-        t = true;
-    else
-        t = false;
-    EXPECT_TRUE(t);
+    EXPECT_TRUE(testTab[0] <= testTab[1]);
 
     MergeSortTest::TearDown();
 }
 
 TEST_F(MergeSortTest, BigTest) {
     int tab[102];
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < 102; ++i) {
         tab[i] = rand();
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }
@@ -276,32 +229,27 @@ TEST_F(MergeSortTest, BigTest) {
 TEST_F(MergeSortTest, BigPozAndNegDoubleTest) {
     int tab[102];
     int x = 0;
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < 101; ++i) {
         x = -abs(rand());
         tab[i] = x;
+        if(i < 101)
         i++;
         tab[i] = x;
+        if (i < 101)
         i++;
         x = abs(rand());
         tab[i] = x;
+        if (i < 101)
         i++;
         tab[i] = x;
     }
     roz = sizeof(tab) / sizeof(tab[0]);
     MergeSortTest::SetUp(tab, roz);
 
-    int p = 0;
-    int n = 0;
-    bool t;
-    for (int i = 0; i < roz; ++i) {
-        testTab[i] = p;
-        i++;
-        testTab[i] = n;
-        if (p <= n)
-            t = true;
-        else
-            t = false;
-        EXPECT_TRUE(t);
+    int j = 1;
+    for (int i = 0; i < roz - 1; ++i) {
+        EXPECT_TRUE(testTab[i] <= testTab[j]);
+        j++;
     }
     MergeSortTest::TearDown();
 }

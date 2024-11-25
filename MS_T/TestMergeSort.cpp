@@ -2,12 +2,21 @@
 #include "MergeSort.h"
 #include <cmath>
 
-
+/*! \brief Klasa testowania tablicy.
+ *         Klasa sluzy do przygotowania testu tablicy oraz jego zamkniecia.
+ */
 class MergeSortTest : public ::testing::Test {
 public:
+    /// Wskaznik do tablicy przechowujaca najpierw testowa a nastepnie posortowana tablice
     int* testTab;
+    /// Zmienna przechowujaca rozmiar tablicy w tescie 
     int roz;
 
+    /*! \brief Metoda przygotowania testu
+    *  Metoda SetUp wczytuje przekazana przez test tablice oraz rozmiar do klasy sortowania oraz zwraca posortowana tablice.
+    *  Metoda SetUp takze ustawia czas jako podstawe losowania funkcji rand.
+    *
+    */
     void SetUp(int tab[], int r) {
         testTab = new int[r];
         MergeSort* A = new MergeSort(tab, r, 0, r - 1);
@@ -19,6 +28,10 @@ public:
         srand(time(NULL));
     }
 
+    /*! \brief Metoda zamkniecia testu
+    *  Metoda TearDown zwalnia tablice testTab z pamieci.
+    *
+    */
     void TearDown() {
         delete[] testTab;
         testTab = nullptr;

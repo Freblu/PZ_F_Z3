@@ -97,8 +97,8 @@ void MergeSort::StartSort()
 	Sort(dane, lew, pra);
 }
 
+/*! Metoda zwracajaca komurke zapisanej tablicy. */
 int MergeSort::DajDane(int x)
 {
-
     return dane[x];
 }

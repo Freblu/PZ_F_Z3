@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sort_0',['Sort',['../class_merge_sort.html#a936cb87a5ab13f718195aaf6e647e988',1,'MergeSort']]],
-  ['startsort_1',['StartSort',['../class_merge_sort.html#a4bc15e30a327649fc35ae2cc211b8ac4',1,'MergeSort']]]
+  ['merge_0',['Merge',['../class_merge_sort.html#ac533ccddd363bdef19a4ff074bd6b821',1,'MergeSort']]],
+  ['mergesort_1',['MergeSort',['../class_merge_sort.html#ae92a141f367657d770606f2b2b078818',1,'MergeSort']]]
 ];

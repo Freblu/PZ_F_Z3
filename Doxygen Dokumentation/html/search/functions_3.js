@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emergesort_0',['~MergeSort',['../class_merge_sort.html#a7140fd17b17558d9810c8e791c353909',1,'MergeSort']]]
+  ['teardown_0',['TearDown',['../class_merge_sort_test.html#a7a8096e83113bde3297ebb20e3dce4bc',1,'MergeSortTest']]]
 ];

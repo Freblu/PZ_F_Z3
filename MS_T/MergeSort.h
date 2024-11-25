@@ -10,16 +10,15 @@ using namespace std;
  *  Klasa sortuje tablice z uzyciem rekursywnej meody Sort oraz metody Merge, pozostale metody sluza do testowania i obslugi klasy.
  */
 class MergeSort
-
 {
 private:
-	//! Zmienna pzechowujaca rozmiar tablicy
+	/// Zmienna pzechowujaca rozmiar tablicy
 	int roz;
-	//! Wskaznik przechowujacy adres do tablicy
+	/// Wskaznik przechowujacy adres do tablicy
 	int* dane;
-	//! Zmienna przechowujaca index poczatku tablicy
+	/// Zmienna przechowujaca index poczatku tablicy
 	int lew; 
-	//! Zmienna przechowujaca index konca tablicy
+	/// Zmienna przechowujaca index konca tablicy
 	int pra;
 public:
 	//! Deklaracja kontruktora klasy
@@ -34,7 +33,7 @@ public:
 	void Wypisz(); 
 	//! Deklaracja metody rozpoczynajacej sortowanie zapisanej tablicy      
 	void StartSort(); 
-	//! Deklaracja metody zwracaj¹cej tablice
+	//! Deklaracja metody zwracajacej komurke tablicy
 	int DajDane(int x);
 };
 
